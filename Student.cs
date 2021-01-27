@@ -17,7 +17,21 @@ namespace OOPTask3A
 
         public string FirstName { get; set; }
         public string FamilyName { get; set; }
-        public DateTime DateOfBirth { get; set; }
+        //Proberty with backing field 
+        private DateTime _dateOfBirth;
+        public DateTime DateOfBirth
+        {
+            get
+            {
+                return _dateOfBirth;
+            }
+            set
+            {
+                if (value <= new DateTime(1900, 1, 1))
+                    value = new DateTime(1900, 1, 1);
+                _dateOfBirth = value;
+            }
+        }
 
         public override string ToString()
         {

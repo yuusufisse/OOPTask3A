@@ -16,8 +16,7 @@ namespace OOPTask3A
                 Console.Write("Birthday: ");
                 string isThisValid = Console.ReadLine();
                 DateTime dateofbirth;
-                while(!DateTime.TryParse(isThisValid, out dateofbirth) || 
-                    dateofbirth<=new DateTime(1900,1,1))
+                while(!DateTime.TryParse(isThisValid, out dateofbirth))
                 {
                     Console.Write("Not valid, try again: ");
                     isThisValid = Console.ReadLine();
